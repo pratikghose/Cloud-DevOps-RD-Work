@@ -1,0 +1,9 @@
+# Get job status from REST
+#1 we need a token from the Jenkins UI:
+Admin->Configure->Show API Token
+1113252f8fbacb78e3f406715343af1086
+
+#2 we can now request json formatted output
+#  for readability, if we have python installed
+#  we can forward the data through a simple formatter
+curl  -s --user admin:1113252f8fbacb78e3f406715343af1086 http://localhost:8080/job/multi-step/lastBuild/api/json | python -mjson.tool

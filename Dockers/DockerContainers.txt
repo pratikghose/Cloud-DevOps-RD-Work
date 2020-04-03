@@ -1,0 +1,36 @@
+Containers are the running instances of images.
+
+
+
+
+COMMANDS
+: docker ps
+	-docker run -a
+: docker run <ImageName>
+	-docker run hello-world
+	-docker run --name MyUbuntu1 -it ubuntu
+: docker start ContainerName/ID
+	-docker start MyUbuntu1
+: docker stop ContainerName/ID
+	-docker start MyUbuntu1
+
+: docker pause ContainerName/ID
+	-docker pause MyUbuntu1
+: docker unpause  ContainerName/ID
+	-docker unpause MyUbuntu1
+
+: docker top ContainerName/ID
+	-docker top MyUbuntu1
+: docker stats ContainerName/ID
+	-docker stats MyUbuntu1
+
+: docker attach ContainerName/ID
+	-docker attach MyUbuntu1
+
+: docker kill ContainerName/ID
+	-docker kill MyUbuntu1
+: docker rm ContainerName/ID
+	-docker rm MyUbuntu1
+
+: docker history ImageName/ID
+	-docker history ubuntu
