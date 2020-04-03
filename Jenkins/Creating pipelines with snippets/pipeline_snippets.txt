@@ -1,0 +1,27 @@
+pipeline {
+           agent any
+           stages {
+                stage("Hello") {
+                     steps {
+                          echo 'Hello World'
+                     }
+                }
+           }
+      }
+
+
+#after adding timeout snippet
+pipeline {
+           agent any
+           stages {
+                stage("Hello") {
+                     steps {
+                         timeout(time: 1000, unit: 'NANOSECONDS') {
+                          echo 'Hello World'
+                         }
+                     }
+                }
+           }
+      }
+
+

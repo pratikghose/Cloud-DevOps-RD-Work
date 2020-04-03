@@ -1,0 +1,26 @@
+Images are the templates used to create Docker Container.
+Images are actually a layer of file systems which are stacked one over the other
+Container is a running instance of image.
+Images are stored in Registory.
+
+
+: docker images --help
+: docker pull <image>
+ 	- docker pull ubuntu:18.04 //tag is defined.
+: docker images
+: docker images -q
+ 	-docker images -f “dangling=false”
+ 	-docker images -f “dangling=false” -q
+
+: docker run <image>
+  	-docker run ubuntu
+  	-docker run --name MyUbuntu -it ubuntu bash
+: docker rmi image
+ 	-docker rmi ubuntu
+ 	-docker rmi ubuntu:18.04
+: docker rmi -f image
+	-docker rmi -f ubuntu:18.04
+
+: docker inspect <image>
+ 	-docker inspect ubuntu
+: docker history imageName
